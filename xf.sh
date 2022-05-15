@@ -69,7 +69,7 @@ cat <<EOF >/etc/v2ray/config.json
                 "fallbacks": [
                     {
                         "dest": 80
-                    }
+                    },
                     {
                         "path": "/g6813g",
                         "dest": 1234,
