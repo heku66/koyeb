@@ -68,7 +68,12 @@ cat <<EOF >/etc/v2ray/config.json
                 "decryption": "none",
                 "fallbacks": [
                     {
-                        "dest": 8001
+                        "dest": 80
+                    }
+                    {
+                        "path": "/g6813g",
+                        "dest": 1234,
+                        "xver": 1
                     }
                 ]
             },
