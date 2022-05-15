@@ -55,16 +55,22 @@ cat <<EOF >/etc/v2ray/config.json
     "inbounds": [
         {
             "listen": "0.0.0.0",
-            "port": 8080,
-            "protocol": "vmess",
+            "port": 6813,
+            "protocol": "vless",
             "settings": {
                 "clients": [
                     {
-                        "id": "11111111-1111-1111-1111-111111111111",
-                        "alterId": 0
+                        "id": "842d4775-3440-2951-6331-546f64e74d36",
+                        "level": 0,
+                        "email": "love@example.com"
                     }
                 ],
-                "disableInsecureEncryption": true
+                "decryption": "none",
+                "fallbacks": [
+                    {
+                        "dest": 8001
+                    }
+                ]
             },
             "streamSettings": {
                 "network": "ws"
@@ -73,7 +79,8 @@ cat <<EOF >/etc/v2ray/config.json
     ],
     "outbounds": [
         {
-            "protocol": "freedom"
+            "protocol": "freedom",
+            "tag": "direct"
         }
     ]
 }
