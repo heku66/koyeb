@@ -65,20 +65,18 @@ cat <<EOF >/etc/v2ray/config.json
                         "email": "love@example.com"
                     }
                 ],
-                "decryption": "none",
-                "fallbacks": [
-                    {
-                        "dest": 80
-                    },
-                    {
-                        "path": "/g6813g",
-                        "dest": 1234,
-                        "xver": 1
-                    }
-                ]
+                "decryption": "none"
             },
             "streamSettings": {
-                "network": "ws"
+                "network": "ws",
+                "security": "none",
+                "wsSettings": {
+                    "acceptProxyProtocol": true,
+                    "path": "/g6813g",
+                    "headers": {
+                        "Host": "ky84-solyhe6813.koyeb.app"
+                    }
+                }
             }
         }
     ],
