@@ -55,27 +55,20 @@ cat <<EOF >/etc/v2ray/config.json
     "inbounds": [
         {
             "listen": "0.0.0.0",
-            "port": 6813,
+            "port": 8080,
             "protocol": "vless",
             "settings": {
                 "clients": [
                     {
-                        "id": "842d4775-3440-2951-6331-546f64e74d36",
+                        "id": "17e55bed-f799-34a4-adb2-a6a10919d291",
                         "level": 0,
                         "email": "love@example.com"
                     }
                 ],
-                "decryption": "none"
+                "disableInsecureEncryption": true
             },
             "streamSettings": {
-                "network": "ws",
-                "security": "none",
-                "wsSettings": {
-                    "acceptProxyProtocol": true,
-                    "path": "/g6813g",
-                    "headers": {
-                        "Host": "ky84-solyhe6813.koyeb.app"
-                    }
+                "network": "ws"
                 }
             }
         }
